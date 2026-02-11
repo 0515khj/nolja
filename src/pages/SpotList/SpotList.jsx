@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import {CategoryFilter, NoData, PageBtn, SpotCard, SpotLeft, SpotListWrap, SpotRight, SpotsItem } from './spotListStyle';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { getAllSpots, getBeaches, getMountin, getValleys } from '../../api/tourService';
+import {getBeaches, getMountin, getValleys } from '../../api/tourService';
 import { areas, getAreaName } from '../../data/areaData';
 import { categories, getCategoryName } from '../../data/categoryData';
 import { FaCaretRight } from "react-icons/fa";
+import { getCampingList } from '../../api/campingService';
+import { getSkiList } from '../../api/skiService';
 
 const SpotList = () => {
 
@@ -13,15 +15,11 @@ const SpotList = () => {
     const navigate = useNavigate();
 
     const searchParams = new URLSearchParams(location.search);
-    const urlArea = searchParams.get('area') || 'all' ; // 기본 디폴트값이 전국
-    const urlCategory = searchParams.get('category') || code || 'A01010900'; // 기본 계곡
 
+    const selectArea = Number(searchParams.get('area')) || '1' ; // 기본 디폴트값이 전국
+    const selectCategory = searchParams.get('category') || code || 'A01010900'; // 기본 계곡
 
-    const [selectArea, setSelectArea] = useState(urlArea);
-    const [selectCategory, setSelectCategory] = useState(urlCategory);
     const [allSpots, setAllSpots] = useState([]);
-    
-
     const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(1); // 기본 페이지번호 1
     const limit = 20; // 한페이지에 20개씩 보여줌
@@ -32,42 +30,22 @@ const SpotList = () => {
             setLoading(true);
 
             let data = [];
-            let fetchFunction = getAllSpots;
+            // let fetchFunction = getAllSpots;
+            let fetchFunction;
 
-            if(selectCategory === 'all'){
-                fetchFunction = getAllSpots;
-            }else if(selectCategory === 'A01010900'){
+            if(selectCategory === 'A01010900'){
                 fetchFunction = getValleys;
             }else if(selectCategory === 'A01011200'){
                 fetchFunction = getBeaches;
             }else if(selectCategory === 'A01010400'){
                 fetchFunction = getMountin;
+            }else if(selectCategory === 'CAMPING'){
+                fetchFunction = getCampingList;
+            }else if(selectCategory === 'SKI'){
+                fetchFunction = getSkiList;
             }
-            // 전체는 getAllSpots 호출 (tourService에 추가 필요)
-            // 일단은 getValleys로
-            // fetchFunction = getValleys;
             
-            // 전국
-            if (selectArea === 'all'){
-                const areaCodes = [1, 2, 3, 4, 5, 6, 7, 8, 31, 32, 33, 34, 35, 36, 37, 38, 39];
-                data = [];
-                const batch = [];
-                for(let i =0; i < areaCodes.length; i+=3){
-                    batch.push(areaCodes.slice(i, i + 3));
-                }
-
-                for(const batchs of batch) {
-                    const result = await Promise.all(
-                        batchs.map(code => fetchFunction(code))
-                    );
-                    data.push(...result.flat());
-
-                    await new Promise(resolve => setTimeout(resolve, 1000));
-                }
-                // data = areaData;
-            }else {
                 data = await fetchFunction(selectArea);
-            }
 
             setAllSpots(data);
             setLoading(false);
@@ -79,20 +57,13 @@ const SpotList = () => {
 
 
     //카테고리 클릭
-    const cateClick = (categoryCode) =>{
-        setSelectCategory(categoryCode);
-        setAllSpots([]);
+    const cateClick = (categoryCode = 'all') =>{
         navigate(`/spots?area=${selectArea}&category=${categoryCode}`);
-        setPage(1);
     }
 
     // 지역 클릭
     const areaClick = (areaCode)=>{
-        setSelectArea(areaCode);
-        setSelectCategory('all');
-        setAllSpots([]);
-        navigate(`/spots?area=${areaCode}&category=all`);
-        setPage(1);
+        navigate(`/spots?area=${areaCode}&category=A01010900`);
     }
 
     const offset = (page - 1) * limit; // 시작점
@@ -106,11 +77,7 @@ const SpotList = () => {
     return (
         <SpotListWrap>
             <div className="inner">
-                <div className="section-title">
-                    <h2>{getAreaName(selectArea)}</h2>
-                    <FaCaretRight />
-                    <span>{getCategoryName(selectCategory)}</span>
-                </div>
+                
                 <div className="container">
                     <SpotLeft>
                         <h3>지역</h3>
@@ -126,16 +93,19 @@ const SpotList = () => {
                         </ul>
                     </SpotLeft>
                     <SpotRight>
+                        <div className="section-title">
+                            <h2>{getAreaName(selectArea)}</h2>
+                            <FaCaretRight />
+                            <span>{getCategoryName(selectCategory)}</span>
+                        </div>
                         <CategoryFilter>
-                            <button onClick={()=> cateClick()}
-                            className={selectCategory === 'all' ? 'active':''}
-                            disabled={selectArea === 'all'}
-                            >
-                            전체
-                            </button>
                             {categories.map(cate => (
                                 <button key={cate.id}
-                                onClick={()=> cateClick(cate.code)}
+                                onClick={()=> {
+                                    if(selectCategory !== cate.code) {
+                                        cateClick(cate.code)
+                                    }
+                                }}
                                 className={selectCategory === cate.code ? 'active' : ''}
                                 >
                                  {cate.name}
@@ -153,13 +123,16 @@ const SpotList = () => {
                                 </NoData>
                             ) : currentSpots.length > 0 ? (
                                 currentSpots.map(spot =>(
-                                    <SpotCard key={spot.contentid}>
-                                        <img src={spot.firstimage || 'images/no-image.jpg'} 
-                                        alt={spot.title} />
+                                    <SpotCard key={spot.contentid || spot.contentId}>
+                                        <img src={spot.firstimage || spot.firstImageUrl || 'images/no-image.jpg'} 
+                                        alt={spot.title || spot.facltNm} />
                                         <div className="info">
-                                            <span>{getAreaName(spot.areacode)}</span>
-                                            <h3>{spot.title}</h3>
-                                            <span>{getCategoryName(spot.cat3)}</span>
+                                            <span>{getAreaName(spot.areacode || spot.doNm)}</span>
+                                            <h3>{spot.title || spot.facltNm}</h3>
+                                            <span>{spot.cat3 ?
+                                                getCategoryName(spot.cat3)
+                                                : selectCategory === 'CAMPING' ? '캠핑장' : '스키장'
+                                            }</span>
                                         </div>
                                     </SpotCard>
                             ))
@@ -177,13 +150,11 @@ const SpotList = () => {
                                     &lt;
                                 </button>
 
-                                {/* <span>{page} / {numpages}</span> */}
                                 {Array(numpages).fill().map((_,idx)=>(
                                     <button key={idx + 1} onClick={()=> setPage(idx + 1)}
                                     style={{
                                         background: page === idx + 1 ? '#333':'#fff',
                                         color : page === idx + 1 ? '#fff':'#333'
-
                                     }}
                                     >
                                         {idx + 1}

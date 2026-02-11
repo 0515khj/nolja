@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Area, HeaderRight, HeaderWrap, Logo, SearchBox } from './common';
 import { FaListUl } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SearchModal from './modals/SearchModal/SearchModal';
+import { areas } from '../data/areaData'
 
 
 
@@ -11,6 +12,12 @@ const Header = () => {
 
     const [subMenu, setSubMenu] = useState(false);
     const [searchModal, setSearchModal] = useState(false);
+    const navigate = useNavigate();
+
+    const areaClick = (areaCode) => {
+        navigate(`/spots?area=${areaCode}&category=A01010900`);
+        setSubMenu(false);
+    }
 
     return (
         <>
@@ -36,23 +43,11 @@ const Header = () => {
                 {subMenu && (
                     <Area>
                     <ul>
-                        <li>서울</li>
-                        <li>인천</li>
-                        <li>대전</li>
-                        <li>대구</li>
-                        <li>광주</li>
-                        <li>부산</li>
-                        <li>울산</li>
-                        <li>세종</li>
-                        <li>경기</li>
-                        <li>강원</li>
-                        <li>충북</li>
-                        <li>충남</li>
-                        <li>경북</li>
-                        <li>경남</li>
-                        <li>전북</li>
-                        <li>전남</li>
-                        <li>제주</li>
+                        {areas.map((area)=>(
+                            <li key={area.code}
+                                onClick={()=> areaClick(area.code)}
+                            >{area.name}</li>
+                        ))}
                     </ul>
                 </Area>
                 )}

@@ -106,7 +106,7 @@ export const Area = styled.div`
     width: 100%;
     padding: 20px 0;
     background: #fff;
-    border-top: 1px solid #e0e0e0;
+    /* border-top: 1px solid #e0e0e0; */
     box-shadow: 0 4px 12px rgba(0,0,0,0.4); 
     animation: slideDown 0.5s ease;
 

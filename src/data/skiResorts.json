@@ -229,7 +229,7 @@
     "homepage": "https://www.edenvalley.co.kr",
     "overview": "에덴밸리리조트는 영남권 대표 스키장으로, 부산과 울산에서 1시간 내외로 접근이 가능합니다. 12면의 슬로프와 7대의 리프트를 운영하며, 남부지방 스키장 중에서는 비교적 큰 규모를 자랑합니다. 천성산 자락의 해발 650~920m에 위치해 있으며, 초중급 코스 위주로 구성되어 있어 가족 단위 방문객들에게 적합합니다. 인공 제설 시스템이 잘 갖춰져 있어 남부 지방임에도 안정적인 스키 시즌 운영이 가능하며, 골프장, 워터파크 등 사계절 레저 시설도 함께 운영하고 있습니다."
   },
-   {
+  {
     "contentid": "ski011",
     "title": "지산포레스트리조트",
     "addr1": "경기도 이천시 마장면 지산로 267",
@@ -259,10 +259,10 @@
     "addr2": "",
     "areacode": "31",
     "cat3": "SKI",
-    "firstimage": "/images/ski/gonjiam_main.jpg",
-    "firstimage2": "/images/ski/gonjiam_sub.jpg",
+    "firstimage": "/images/ski/gonjiam_main.png",
+    "firstimage2": "/images/ski/gonjiam_sub.png",
     "images": [
-      "/images/ski/gonjiam_1.jpg",
+      "/images/ski/gonjiam_1.png",
       "/images/ski/gonjiam_2.jpg",
       "/images/ski/gonjiam_3.jpg",
       "/images/ski/gonjiam_4.jpg",
@@ -333,10 +333,7 @@
     "images": [
       "/images/ski/starhill_1.jpg",
       "/images/ski/starhill_2.jpg",
-      "/images/ski/starhill_3.jpg",
-      "/images/ski/starhill_4.jpg",
-      "/images/ski/starhill_5.jpg",
-      "/images/ski/starhill_6.jpg"
+      "/images/ski/starhill_3.jpg"
     ],
     "mapx": "127.274722",
     "mapy": "37.730833",
@@ -346,7 +343,7 @@
   },
   {
     "contentid": "ski016",
-    "title": "무주덕유산리조트 설천봉",
+    "title": "무주덕유산리조트",
     "addr1": "전북특별자치도 무주군 설천면 구천동로 711",
     "addr2": "",
     "areacode": "37",
@@ -389,5 +386,243 @@
     "tel": "031-584-0100",
     "homepage": "https://www.koreanskii.com",
     "overview": "코리아나호텔 청평스키장은 북한강변에 위치한 수도권 스키장으로, 서울에서 1시간 거리입니다. 4면의 슬로프와 3대의 리프트를 운영하는 소규모 스키장이지만, 북한강을 바라보며 스키를 탈 수 있는 독특한 경관이 특징입니다. 초급자와 중급자를 위한 완만한 코스 위주로 구성되어 있으며, 가족 단위나 동호회 모임에 적합합니다. ITX 청춘열차를 이용해 대중교통으로 접근할 수 있어 편리하며, 호텔 시설이 잘 갖춰져 있어 스키와 함께 휴식을 즐기기 좋습니다."
+  },
+  {
+    "contentid": "sled001",
+    "title": "서울랜드 눈썰매장",
+    "addr1": "서울특별시 과천시 광명로 181",
+    "addr2": "서울랜드 내",
+    "areacode": "1",
+    "cat3": "SKI",
+    "firstimage": "/images/sled/seoulland_main.jpg",
+    "firstimage2": "/images/sled/seoulland_sub.jpg",
+    "images": [
+      "/images/sled/seoulland_1.jpg",
+      "/images/sled/seoulland_2.jpg",
+      "/images/sled/seoulland_3.jpg"
+    ],
+    "mapx": "127.017500",
+    "mapy": "37.434722",
+    "tel": "02-509-6000",
+    "homepage": "https://www.seoulland.co.kr",
+    "overview": "서울랜드 눈썰매장은 수도권 최대 규모의 실내외 복합 썰매장입니다. 매년 12월부터 2월까지 운영되며, 초급·중급·상급 코스로 나뉘어져 있어 어린이부터 성인까지 안전하게 즐길 수 있습니다. 서울대공원과 연계되어 있어 가족 나들이 코스로 인기가 높으며, 대중교통으로 접근이 편리합니다. 눈썰매 외에도 눈썰매 튜브, 눈조각 체험, 얼음썰매 등 다양한 겨울 놀이를 즐길 수 있습니다. 놀이기구와 함께 즐길 수 있어 하루 종일 가족과 함께 시간을 보내기 좋습니다."
+  },
+  {
+    "contentid": "sled002",
+    "title": "일산호수공원 눈썰매장",
+    "addr1": "경기도 고양시 일산동구 호수로 595",
+    "addr2": "일산호수공원 내",
+    "areacode": "31",
+    "cat3": "SKI",
+    "firstimage": "/images/sled/ilsan_main.jpg",
+    "firstimage2": "/images/sled/ilsan_sub.jpg",
+    "images": [
+      "/images/sled/ilsan_1.jpg"
+    ],
+    "mapx": "126.765556",
+    "mapy": "37.656389",
+    "tel": "031-8075-4347",
+    "homepage": "https://www.goyang.go.kr",
+    "overview": "일산호수공원 눈썰매장은 호수공원 내 넓은 잔디광장에 조성되는 대형 썰매장입니다. 매년 12월 말부터 2월 초까지 운영되며, 150m 길이의 슬로프 4개 레인을 갖추고 있습니다. 완만한 경사로 되어 있어 어린 자녀를 동반한 가족들이 안전하게 즐길 수 있으며, 무료로 운영되어 부담 없이 방문할 수 있습니다. 호수공원의 아름다운 겨울 풍경과 함께 썰매를 탈 수 있으며, 주변에 카페와 식당이 많아 편의시설 이용이 편리합니다. 3호선 정발산역에서 도보 10분 거리로 대중교통 접근성이 우수합니다."
+  },
+  {
+    "contentid": "sled003",
+    "title": "서울어린이대공원 눈썰매장",
+    "addr1": "서울특별시 광진구 능동로 216",
+    "addr2": "어린이대공원 내",
+    "areacode": "1",
+    "cat3": "SKI",
+    "firstimage": "/images/sled/childpark_main.jpg",
+    "firstimage2": "/images/sled/childpark_sub.jpg",
+    "images": [
+      "/images/sled/childpark_1.png",
+      "/images/sled/childpark_2.jpg",
+      "/images/sled/childpark_3.jpg"
+    ],
+    "mapx": "127.081111",
+    "mapy": "37.547778",
+    "tel": "02-450-9311",
+    "homepage": "https://www.sisul.or.kr/open_content/childrenpark",
+    "overview": "서울어린이대공원 눈썰매장은 도심 속에서 즐기는 겨울 레저 시설입니다. 매년 12월 중순부터 2월 초까지 운영되며, 어린이와 유아를 위한 안전한 슬로프가 마련되어 있습니다. 썰매장 외에도 눈놀이터, 눈사람 만들기 등 다양한 겨울 체험 프로그램이 진행됩니다. 공원 내 동물원, 놀이시설과 함께 이용할 수 있어 하루 종일 즐길 거리가 풍부합니다. 7호선 어린이대공원역 바로 앞에 위치해 있어 교통이 매우 편리하며, 주차장도 넓게 마련되어 있습니다."
+  },
+  {
+    "contentid": "sled005",
+    "title": "뚝섬한강공원 눈썰매장",
+    "addr1": "서울특별시 광진구 강변북로 139",
+    "addr2": "뚝섬한강공원 내",
+    "areacode": "1",
+    "cat3": "SKI",
+    "firstimage": "/images/sled/ttukseom_main.jpg",
+    "firstimage2": "/images/sled/ttukseom_sub.png",
+    "images": [
+      "/images/sled/ttukseom_1.jpg",
+      "/images/sled/ttukseom_2.jpg",
+      "/images/sled/ttukseom_3.jpg"
+    ],
+    "mapx": "127.066389",
+    "mapy": "37.531667",
+    "tel": "02-3780-0561",
+    "homepage": "https://hangang.seoul.go.kr",
+    "overview": "뚝섬한강공원 눈썰매장은 한강변에서 즐기는 겨울 레저 시설입니다. 매년 12월 중순부터 2월 초까지 운영되며, 80m 길이의 슬로프 8개 레인을 갖추고 있습니다. 한강의 탁 트인 전망과 함께 썰매를 즐길 수 있으며, 유아용과 일반용 슬로프가 분리되어 있어 안전합니다. 썰매장 인근에 편의점, 식당 등 편의시설이 잘 갖춰져 있으며, 주차장도 넓게 마련되어 있습니다. 7호선 뚝섬유원지역 2번 출구에서 도보 5분 거리로 대중교통 이용이 편리합니다."
+  },
+  {
+    "contentid": "sled006",
+    "title": "양재천 눈썰매장",
+    "addr1": "서울특별시 강남구 양재천로 89",
+    "addr2": "양재천 체육공원 내",
+    "areacode": "1",
+    "cat3": "SKI",
+    "firstimage": "/images/sled/yangjaecheon_main.jpg",
+    "firstimage2": "/images/sled/yangjaecheon_sub.jpg",
+    "images": [
+      "/images/sled/yangjaecheon_1.jpg",
+      "/images/sled/yangjaecheon_2.jpg"
+    ],
+    "mapx": "127.032778",
+    "mapy": "37.473056",
+    "tel": "02-3482-0100",
+    "homepage": "https://www.gangnam.go.kr",
+    "overview": "양재천 눈썰매장은 강남구 양재천 체육공원 내에 조성되는 도심 속 썰매장입니다. 12월 말부터 2월 초까지 운영되며, 100m 길이의 슬로프 5개 레인을 보유하고 있습니다. 강남 지역에서 쉽게 접근할 수 있는 무료 썰매장으로, 주말과 공휴일에는 가족 단위 방문객들로 붐빕니다. 완만한 경사로 어린이들이 안전하게 즐길 수 있으며, 인근에 카페와 편의시설이 많아 이용이 편리합니다. 3호선 양재역 또는 신분당선 양재시민의숲역에서 도보 15분 거리에 위치해 있습니다."
+  },
+  {
+    "contentid": "sled007",
+    "title": "에버랜드 눈썰매장",
+    "addr1": "경기도 용인시 처인구 포곡읍 에버랜드로 199",
+    "addr2": "에버랜드 내",
+    "areacode": "31",
+    "cat3": "SKI",
+    "firstimage": "/images/sled/everland_main.jpg",
+    "firstimage2": "/images/sled/everland_sub.jpg",
+    "images": [
+      "/images/sled/everland_1.jpg",
+      "/images/sled/everland_2.jpg",
+      "/images/sled/everland_3.jpg"
+    ],
+    "mapx": "127.202500",
+    "mapy": "37.293889",
+    "tel": "031-320-5000",
+    "homepage": "https://www.everland.com",
+    "overview": "에버랜드 눈썰매장은 국내 최대 테마파크 내에 위치한 프리미엄 썰매장입니다. 매년 12월부터 2월까지 운영되며, 150m 길이의 슬로프 10개 레인을 갖춘 대형 시설입니다. 초급자용과 상급자용 슬로프가 분리되어 있어 수준에 맞게 즐길 수 있으며, 안전요원이 상주하여 안전사고를 예방합니다. 에버랜드 입장권으로 썰매장을 함께 이용할 수 있으며, 놀이기구와 공연, 퍼레이드 등 다양한 즐길 거리가 있습니다. 용인경전철 에버랜드역 또는 셔틀버스를 이용해 접근할 수 있습니다."
+  },
+  {
+    "contentid": "sled009",
+    "title": "대관령 양떼목장 눈썰매장",
+    "addr1": "강원특별자치도 평창군 대관령면 양떼목장길 483-32",
+    "addr2": "",
+    "areacode": "32",
+    "cat3": "SKI",
+    "firstimage": "/images/sled/yangtte_main.jpg",
+    "firstimage2": "/images/sled/yangtte_sub.jpg",
+    "images": [
+      "/images/sled/yangtte_1.jpg",
+      "/images/sled/yangtte_2.jpg",
+      "/images/sled/yangtte_3.jpg"
+    ],
+    "mapx": "128.707500",
+    "mapy": "37.635833",
+    "tel": "033-335-1966",
+    "homepage": "https://www.yangtte.co.kr",
+    "overview": "대관령 양떼목장 눈썰매장은 해발 850m 고원에 위치한 자연 친화적 썰매장입니다. 12월부터 2월까지 운영되며, 목장의 완만한 언덕을 활용한 100m 길이의 슬로프를 갖추고 있습니다. 천연 눈으로 만들어진 슬로프에서 썰매를 즐길 수 있으며, 양떼목장의 겨울 설경과 함께 특별한 추억을 만들 수 있습니다. 양 먹이주기 체험, 트랙터 마차 등 목장 프로그램과 함께 즐길 수 있으며, 목장 입장료에 썰매 이용이 포함되어 있습니다. 평창 시내에서 차량으로 30분 거리에 위치해 있습니다."
+  },
+  {
+    "contentid": "sled011",
+    "title": "김해롯데워터파크 매직 후크",
+    "addr1": "경상남도 김해시 장유로 555",
+    "addr2": "롯데프리미엄아울렛 내",
+    "areacode": "36",
+    "cat3": "SKI",
+    "firstimage": "/images/sled/gimhae_main.jpg",
+    "firstimage2": "/images/sled/gimhae_sub.jpg",
+    "images": [
+      "/images/sled/gimhae_1.jpg",
+      "/images/sled/gimhae_2.jpg",
+      "/images/sled/gimhae_3.jpg"
+    ],
+    "mapx": "128.810278",
+    "mapy": "35.209167",
+    "tel": "1899-2060",
+    "homepage": "https://www.lwp.co.kr/gim",
+    "overview": "김해롯데워터파크 눈썰매장은 영남권 대표 실내 워터파크에서 운영하는 겨울 시즌 특별 프로그램입니다. 12월부터 2월까지 야외 공간에 눈썰매장이 조성되며, 120m 길이의 슬로프 8개 레인을 보유하고 있습니다. 워터파크 이용과 함께 썰매를 즐길 수 있어 실내외 레저를 동시에 즐길 수 있습니다. 롯데프리미엄아울렛과 연계되어 있어 쇼핑과 함께 방문하기 좋으며, 부산과 김해 시내에서 30분 거리로 접근성이 우수합니다. 주차장이 넓게 마련되어 있어 편리합니다."
+  },
+  {
+    "contentid": "sled013",
+    "title": "광주패밀리랜드 눈썰매장",
+    "addr1": "광주광역시 북구 수박밭로 677",
+    "addr2": "패밀리랜드 내",
+    "areacode": "5",
+    "cat3": "SKI",
+    "firstimage": "/images/sled/gwangju_main.jpg",
+    "firstimage2": "/images/sled/gwangju_sub.jpg",
+    "images": [
+      "/images/sled/gwangju_1.jpg",
+      "/images/sled/gwangju_2.jpg",
+      "/images/sled/gwangju_3.jpg"
+    ],
+    "mapx": "126.878611",
+    "mapy": "35.180833",
+    "tel": "062-613-5398",
+    "homepage": "https://www.gjfamilyland.co.kr",
+    "overview": "광주패밀리랜드 눈썰매장은 광주 대표 테마파크 내에 조성되는 겨울 시즌 특별 프로그램입니다. 12월부터 2월까지 운영되며, 130m 길이의 슬로프 7개 레인을 보유하고 있습니다. 초급자용과 상급자용 슬로프가 분리되어 있어 수준에 맞게 즐길 수 있으며, 놀이공원 입장권으로 썰매장을 함께 이용할 수 있습니다. 놀이기구와 함께 하루 종일 즐길 수 있어 가족 단위 방문객들에게 인기가 높습니다. 패밀리랜드 셔틀버스를 이용하거나 자가용으로 접근할 수 있으며, 주차장이 넓게 마련되어 있습니다."
+  },
+  {
+    "contentid": "sled014",
+    "title": "인천대공원 눈썰매장",
+    "addr1": "인천광역시 남동구 무네미로 236",
+    "addr2": "인천대공원 내",
+    "areacode": "2",
+    "cat3": "SKI",
+    "firstimage": "/images/sled/incheon_main.jpg",
+    "firstimage2": "/images/sled/incheon_sub.jpg",
+    "images": [
+      "/images/sled/incheon_1.jpg",
+      "/images/sled/incheon_2.jpg",
+      "/images/sled/incheon_3.jpg"
+    ],
+    "mapx": "126.738333",
+    "mapy": "37.434167",
+    "tel": "032-440-5800",
+    "homepage": "https://www.incheon.go.kr/park",
+    "overview": "인천대공원 눈썰매장은 인천 지역 최대 규모의 도시공원 내에 조성되는 썰매장입니다. 매년 12월 말부터 2월 초까지 운영되며, 110m 길이의 슬로프 5개 레인을 갖추고 있습니다. 완만한 경사와 넓은 공간으로 어린이부터 성인까지 안전하게 즐길 수 있으며, 무료로 운영되어 부담 없이 방문 가능합니다. 공원 내 호수와 산책로를 함께 이용할 수 있으며, 동물원과도 가까워 다양한 볼거리가 있습니다. 수인선 인천대공원역에서 도보 5분 거리로 대중교통 접근이 편리하며, 주차장도 충분합니다."
+  },
+  {
+    "contentid": "sled017",
+    "title": "제주 한라산 눈썰매장",
+    "addr1": "제주특별자치도 제주시 1100로 2070-61",
+    "addr2": "한라산 1100고지 휴게소 인근",
+    "areacode": "39",
+    "cat3": "SKI",
+    "firstimage": "/images/sled/jeju_main.jpg",
+    "firstimage2": "/images/sled/jeju_sub.jpg",
+    "images": [
+      "/images/sled/jeju_1.jpg",
+      "/images/sled/jeju_2.jpg",
+      "/images/sled/jeju_3.jpg"
+    ],
+    "mapx": "126.483333",
+    "mapy": "33.380556",
+    "tel": "064-710-3945",
+    "homepage": "https://www.jeju.go.kr",
+    "overview": "제주 한라산 눈썰매장은 남쪽 섬에서 즐기는 특별한 설원 체험입니다. 12월 말부터 2월 중순까지 한라산 1100고지 휴게소 인근에서 운영되며, 80m 길이의 슬로프 3개 레인을 갖추고 있습니다. 해발 1,100m 고지대에서 천연 눈으로 만들어진 슬로프에서 썰매를 즐길 수 있으며, 한라산의 설경과 함께 특별한 추억을 만들 수 있습니다. 제주에서는 흔치 않은 겨울 레저 시설로, 관광객들에게 인기가 높습니다. 렌터카나 버스를 이용해 접근할 수 있으며, 휴게소에서 간단한 식사와 휴식이 가능합니다."
+  },
+  {
+    "contentid": "sled018",
+    "title": "수원 광교호수공원 눈썰매장",
+    "addr1": "경기도 수원시 영통구 광교호수공원로 57",
+    "addr2": "광교호수공원 내",
+    "areacode": "31",
+    "cat3": "SKI",
+    "firstimage": "/images/sled/suwon_main.jpg",
+    "firstimage2": "/images/sled/suwon_sub.jpg",
+    "images": [
+      "/images/sled/suwon_1.jpg",
+      "/images/sled/suwon_2.jpg",
+      "/images/sled/suwon_3.jpg"
+    ],
+    "mapx": "127.059444",
+    "mapy": "37.285556",
+    "tel": "031-228-4180",
+    "homepage": "https://www.suwon.go.kr",
+    "overview": "수원 광교호수공원 눈썰매장은 현대적 도시공원에서 즐기는 겨울 레저 시설입니다. 매년 12월 말부터 2월 초까지 운영되며, 140m 길이의 슬로프 7개 레인을 갖춘 대형 썰매장입니다. 호수공원의 아름다운 겨울 풍경과 함께 썰매를 즐길 수 있으며, 무료로 운영되어 부담 없이 방문할 수 있습니다. 공원 내 카페와 식당이 많아 편의시설 이용이 편리하며, 산책로와 자전거도로도 잘 조성되어 있습니다. 신분당선 광교중앙역에서 도보 10분 거리로 대중교통 접근이 편리하며, 주차장도 넓게 마련되어 있습니다."
   }
+  
 ]

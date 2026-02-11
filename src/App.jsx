@@ -1,16 +1,16 @@
-import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import GlobalStyle from './styles/GlobalStyle';
 import Main from './pages/MainHome/Main';
 import Layout from './components/Layout';
 import SpotList from './pages/SpotList/SpotList';
-import Test from './pages/MainHome/Test';
+import { ScrollTop } from './components/ScrollTop';
 
 const App = () => {
   return (
     <>
     <GlobalStyle/>
     <BrowserRouter>
+     <ScrollTop/>
         <Routes>
           <Route path='/' element={<Layout/>}> 
                <Route index element={<Main/>}/>

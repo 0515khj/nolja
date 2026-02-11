@@ -1,4 +1,3 @@
-import { categories } from "../data/categoryData";
 import tourApi from "./tourApi"
 
 
@@ -27,39 +26,11 @@ export const getMountin = (areaCode) => fetchTourData(areaCode, 'A01010400'); //
 /* / 여기엔 카테고리 추가할때마다 작성 */
 
 
-export const getAllSpots = async (areaCode) => {
-    const categoryCodes = categories.map(ca => ca.code);
-    let allData =[];
-    for(let code of categoryCodes){
-        const response = await tourApi.get('/areaBasedList2', {
-            params: {
-                numOfRows: 100,
-                pageNo: 1,
-                arrange: 'C',
-                contentTypeId: 12,
-                areaCode: areaCode,
-                cat1: 'A01',
-                cat2: 'A0101',
-                cat3: code,
-            }
-        });
-        const cateItem = response.data.response.body.items.item || [];
-        allData = [...allData, ...cateItem];
-    }
-
-    return allData;
-};
-
 // 상세 정보 (설명 포함)
 export const getSpotDetail = async (contentId) => {
     const response = await tourApi.get('/detailCommon2', {
         params: {
             contentId: contentId,
-            // defaultYN: 'Y',
-            // firstImageYN: 'Y',
-            // areacodeYN: 'Y',
-            // overviewYN: 'Y', 
-            // mapinfoYN: 'Y',
         }
     });
     console.log('전체 응답:', response.data);
@@ -97,6 +68,7 @@ export const getCategoryCode = async (cat1, cat2) => {
 export const getBestSpots = async()=>{
     const categoryArea = [
         { cat3: 'A01010900', areaCode: 32 },  // 계곡 - 강원
+        { cat3: 'A01010900', areaCode: 1 },  // 계곡 - 서울
         { cat3: 'A01011200', areaCode: 6 },   // 바다 - 부산
         { cat3: 'A01010400', areaCode: 32 },  // 산 - 강원
     ]

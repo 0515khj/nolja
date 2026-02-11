@@ -1,80 +1,12 @@
 import styled from 'styled-components';
 
-
-// export const SpotListWrap = styled.div`
-// .section-title {
-//     margin: 50px auto;
-// }
-// .container {
-//     position: relative;
-//     display: flex;
-//     gap: 20px;
-// }
-// `
-
-// export const SpotLeft = styled.div`
-// flex: 1;
-// `
-
-// export const SpotRight = styled.div`
-// flex: 9;
-// `
-
-// export const SpotsItem = styled.div`
-//     display: grid;
-//     grid-template-columns: repeat(4,1fr);
-//     gap: 20px;
-//     `
-// export const CategoryFilter = styled.div`
-// display: flex; gap: 20px;
-// margin-bottom: 50px;
-// `
-// export const SpotCard = styled.div`
-//     img {
-//         border-radius: 8px;
-//         width: 300px;
-//         height: 300px;
-//     }
-//     `
-// export const NoData = styled.div`
-//     width: 100%;
-//     height: 40vh;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     /* align-items: center; */
-    
-    
-//     .loading {
-//         display: flex;
-//         align-items: center;
-//         gap: 20px;
-//         position: absolute; left: 50%;
-//         transform: translateX(-50%);
-//         h3 {
-//             font-size: 32px;
-//             font-weight: 700;
-//         }
-//         img {
-//             width: 80px;
-//         }
-//     }
-// `
-
-// export const PageBtn = styled.div`
-//     display: flex;
-//     justify-content: center;
-//     gap: 10px;
-//     margin-top: 20px;
-// `
-
 export const SpotListWrap = styled.div`
   padding: 40px 0;
   min-height: 100vh;
   background: #f8f9fa;
+  margin: 0px auto 50px;
   
   .section-title {
-    margin: 0px auto 50px;
     h2 {
       font-size: 32px;
       font-weight: 700;
@@ -94,14 +26,15 @@ export const SpotListWrap = styled.div`
   .container {
     position: relative;
     display: flex;
-    gap: 30px;
+    gap: 50px;
   }
 `;
 
 export const SpotLeft = styled.aside`
   flex: 1;
-  max-width: 200px;
-  padding-top: 40px;
+  align-self: flex-start;
+  position: sticky; top: 80px; left: 0;
+  padding-top: 130px;
   h3 {
     font-size: 18px;
     font-weight: 600;
@@ -162,7 +95,7 @@ export const CategoryFilter = styled.div`
     
     &:hover:not(:disabled) {
       border-color: #74B9FF;
-      color: #74B9FF;
+      color: #333;
       transform: translateY(-2px);
       box-shadow: 0 4px 8px rgba(116, 185, 255, 0.2);
     }
@@ -171,6 +104,11 @@ export const CategoryFilter = styled.div`
       background: #74B9FF;
       color: #fff;
       border-color: #74B9FF;
+      cursor: default;
+
+      &:hover {
+      color: #fff;
+      }
     }
     
     &:disabled {
@@ -188,11 +126,10 @@ export const SpotsItem = styled.div`
   gap: 24px;
   
   @media (max-width: 1200px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   
   @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
   }
 `;
 

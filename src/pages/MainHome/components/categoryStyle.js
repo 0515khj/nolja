@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 
 export const CategoryWrap = styled.div`
+margin-top: 70px;
 `;
 
 export const CateBox = styled.div`
@@ -36,17 +37,6 @@ export const CateGrid = styled.div`
     }
     
   }
-
-  /* background: #f8f9fa; */
-  /* &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-    background: ${props => props.$hoverColor || '#4facfe'};
-    
-    .title {
-      color: #fff;
-    }
-  } */
 
   span {
     background: #f5f5f5;

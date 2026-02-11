@@ -7,15 +7,12 @@ const Category = () => {
     const navigate = useNavigate();
 
     const cateClick = (cate) =>{
-        navigate(`/spots?area=all&category=${cate.code}`);
+        navigate(`/spots?area=1&category=${cate.code}`);
     }
 
     return (
         <CategoryWrap>
             <div className="inner">
-                <div className="section-title">
-                {/* <h2>직접 찾는 카테고리</h2> */}
-                </div>
                 <div className="container">
                     <CateBox>
                         {categories.map(cate =>(
