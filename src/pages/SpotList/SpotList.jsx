@@ -24,13 +24,14 @@ const SpotList = () => {
     const [page, setPage] = useState(1); // 기본 페이지번호 1
     const limit = 20; // 한페이지에 20개씩 보여줌
 
-    
+    console.log(allSpots)
     useEffect(()=>{
+        let mount = true;
+
         const fetchAllSpots = async()=>{
             setLoading(true);
 
             let data = [];
-            // let fetchFunction = getAllSpots;
             let fetchFunction;
 
             if(selectCategory === 'A01010900'){
@@ -47,12 +48,17 @@ const SpotList = () => {
             
                 data = await fetchFunction(selectArea);
 
-            setAllSpots(data);
-            setLoading(false);
-            //데이터를 새로 불러오니까 페이지도 1로 초기화시켜야함
-            setPage(1);
+            if(mount){
+                setAllSpots(data);
+                setLoading(false);
+                //데이터를 새로 불러오니까 페이지도 1로 초기화시켜야함
+                setPage(1);
+            }
         }
         fetchAllSpots();
+         return () => {
+            mount = false;
+    };
     },[selectArea, selectCategory])
 
 
@@ -73,6 +79,38 @@ const SpotList = () => {
 
     // 총 페이지수 
     const numpages = Math.ceil(allSpots.length / limit);
+
+    //디테일 페이지로 보냄
+    const goDetail = (item) =>{
+
+        console.log('🔍 클릭한 item 전체:', item);  // 👈 전체 객체 확인
+    console.log('📦 키 목록:', Object.keys(item));  // 👈 키 목록만
+    console.log('🆔 contentid:', item.contentid);  // 👈 소문자
+    console.log('🆔 contentId:', item.contentId);
+
+        let endId = '';
+        let endType ='';
+        
+        if (selectCategory === 'SKI') {
+            endId = item.contentid;
+            endType = 'SKI';
+        } else if (selectCategory === 'CAMPING') {
+            endId = item.contentId;
+            endType = 'CAMPING';
+        }else{
+            endId = item.contentid;
+            endType = item.contenttypeid;
+        }
+
+        navigate(`/detail/${endId}`,{
+            state:{
+                type:endType,
+                areaCode:selectArea,
+                categoryCode:selectCategory
+            }
+        })
+
+    }
 
     return (
         <SpotListWrap>
@@ -101,11 +139,12 @@ const SpotList = () => {
                         <CategoryFilter>
                             {categories.map(cate => (
                                 <button key={cate.id}
-                                onClick={()=> {
-                                    if(selectCategory !== cate.code) {
-                                        cateClick(cate.code)
-                                    }
-                                }}
+                                // onClick={()=> {
+                                //     if(selectCategory !== cate.code) {
+                                //         cateClick(cate.code)
+                                //     }
+                                // }}
+                                onClick={()=>cateClick(cate.code)}
                                 className={selectCategory === cate.code ? 'active' : ''}
                                 >
                                  {cate.name}
@@ -123,7 +162,9 @@ const SpotList = () => {
                                 </NoData>
                             ) : currentSpots.length > 0 ? (
                                 currentSpots.map(spot =>(
-                                    <SpotCard key={spot.contentid || spot.contentId}>
+                                    <SpotCard key={spot.contentid || spot.contentId}
+                                              onClick={()=>goDetail(spot)}
+                                    >
                                         <img src={spot.firstimage || spot.firstImageUrl || 'images/no-image.jpg'} 
                                         alt={spot.title || spot.facltNm} />
                                         <div className="info">

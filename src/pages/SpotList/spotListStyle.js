@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const SpotListWrap = styled.div`
   padding: 40px 0;
   min-height: 100vh;
-  background: #f8f9fa;
+  background: #FAF9F6;
   margin: 0px auto 50px;
   
   .section-title {
@@ -104,7 +104,7 @@ export const CategoryFilter = styled.div`
       background: #74B9FF;
       color: #fff;
       border-color: #74B9FF;
-      cursor: default;
+      /* cursor: default; */
 
       &:hover {
       color: #fff;
@@ -115,7 +115,7 @@ export const CategoryFilter = styled.div`
       background: #f5f5f5;
       color: #ccc;
       border-color: #e0e0e0;
-      cursor: not-allowed;
+      /* cursor: not-allowed; */
     }
   }
 `;
